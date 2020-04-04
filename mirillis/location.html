@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Location</title>
+    <title>Mirillis</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img class="graficlogo" src="./style/images/logo.png" alt="logo"></a>
+        </div>
+        
+        <nav>
+            <div class="topnav" id="myTopnav">
+                <a href="index.html">HOME</a>
+                <a href="projects.html">PROJECTS</a>
+                <a href="blog.html">BLOG</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="about.html">ABOUT</a>
+                <a href="services.html">SERVICES</a>
+                <a href="location.html">LOCATION</a>
+                <a id="menu" href="#" class="icon">&#9776;</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="location--text">
+            <h2>Current location</h2>
+        </div>
+        <div id="map"></div>
+    </main>
     
+    <footer>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="blog.html">BLOG</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="about.html">ABOUT</a>
+            <a href="services.html">SERVICES</a>
+            <a href="location.html">LOCATION</a>
+        </nav>
+        <div class="logo">
+           <a href="index.html"> <img class="footer--graficlogo" src="./style/images/logo.png" alt=""> </a>
+        </div>
+        <div class="social">
+            <a href="#"><img src="./style/images/footer-icons/em.png" alt=""></a>
+            <a href="#"><img src="./style/images/footer-icons/face.png" alt=""></a>
+            <a href="#"><img src="./style/images/footer-icons/goo.png" alt=""></a>
+            <a href="#"><img src="./style/images/footer-icons/inst.png" alt=""></a>
+            <a href="#"><img src="./style/images/footer-icons/pint.png" alt=""></a>
+        </div>
+        <p>HTML - coding practice.2020</p>
+    </footer>
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          var uluru = {lat: 37.5924173, lng: 15.0844248};
+          // The map, centered at Uluru
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 6, center: uluru});
+          // The marker, positioned at Uluru
+          var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1w9TkpHsEQQxxnFVNdkNbauDJqI6ORU&callback=initMap">
+            </script>
+    <script src="./java-script/index.js"></script>
 </body>
 </html>
