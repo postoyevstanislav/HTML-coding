@@ -96,6 +96,10 @@ footer a {
 	margin-left: 10px;
 }
 
+.footer--nav {
+	text-align: center;
+}
+
 footer nav a:hover {
 	border-bottom: 1px solid #fff;
 }
